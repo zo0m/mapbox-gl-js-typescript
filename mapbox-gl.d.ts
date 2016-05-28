@@ -218,7 +218,7 @@ declare namespace mapboxgl {
 
 		getBounds(): LngLatBounds;
 
-		setMaxBounds(bounds: LngLatBounds | Array<Array<number>> |null| undefined): this;
+		setMaxBounds(bounds: LngLatBounds | Array<Array<number>>): this;
 
 		setMinZoom(minZoom: number): this;
 
@@ -228,9 +228,9 @@ declare namespace mapboxgl {
 
 		unproject(point: Array<number>): LngLat;
 
-		queryRenderedFeatures(pointOrBox?: Point | Array<number> | Array<Point> | Array<Array<number>>, params?: { layers?: Array<string>, filter?: Array<any> }): Array<GeoJSON.Feature>;
+		queryRenderedFeatures(pointOrBox?: Point | Array<number> | Array<Point> | Array<Array<number>>, params?: { layers?: Array<string>, filter?: Array<any> }): Array<GeoJSON.Feature<any>>;
 
-		querySourceFeatures(sourceID: string, params?: { sourceLayer?: string, filter?: Array<any> }): Array<GeoJSON.Feature>;
+		querySourceFeatures(sourceID: string, params?: { sourceLayer?: string, filter?: Array<any> }): Array<GeoJSON.Feature<any>>;
 
 		setStyle(style: Style): this;
 
@@ -271,7 +271,7 @@ declare namespace mapboxgl {
 
 		loaded(): boolean;
 
-		remove(): undefined;
+		remove(): any;
 
 		getCenter(): LngLat;
 
