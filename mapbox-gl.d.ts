@@ -529,7 +529,7 @@ declare namespace mapboxgl {
 
 		setHTML(html: string): this;
 
-		setDomContent(htmlNode: Node): this;
+		setDOMContent(htmlNode: Node): this;
 	}
 
 	abstract class Control {
